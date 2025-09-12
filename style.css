@@ -23,8 +23,15 @@ a {
   color: rgb(130, 130, 255);
 }
 
-iframe {
-  display: none;
+span {
+  font-size: 3.5rem;
+  font-family: "Harry Potter";
+  text-shadow: 10px 10px 10px hsla(100, 10%, 0%, 0.8);
+}
+
+ol {
+  list-style: decimal;
+  font-size: 1.2rem;
 }
 
 .haGRID {
@@ -34,32 +41,33 @@ iframe {
     min-height: 100vh;
     width: 100%;
 
+    position: relative;
+    z-index: 0;
+
+}
+
+.haGRID::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
     background-image: url("./resources/lego\ hut\ two.png");
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    z-index: -1;
+    filter: blur(px);
 }
 
-.haGRID span, .dumbleGRID span, .snape span {
-  font-size: 3.5rem;
-  font-family: "Harry Potter";
-  text-shadow: 10px 10px 10px hsla(100, 10%, 50%, 0.7);
-}
-
-.haGRID ol, .dumbleGRID ol, .snape ol, .more ol {
-  list-style: decimal;
+ h1 {
+  padding-top: 6vh;
   font-size: 1.2rem;
-}
-
-.haGRID h1, .haGRID ol, .haGRID li, .more li {
-  padding: 10px 10px 0px 20px;
+  text-shadow: 10px 10px 5px hsla(100, 10%, 0%, 0.8);
 }
 
 .haggard {
     height: 90vh;
-    max-width: 130%;
+    max-width: 160%;
     align-self: end;
-
-
     animation: bounceIn 2s ease-in-out 0ms alternate;
 }
 
@@ -67,15 +75,14 @@ iframe {
   height: 70%;
   width: 100%;
   table-layout: fixed;
-  align-self: start;
 
   word-spacing: 5px;
   overflow-wrap: break-word;
   line-height: 1.2;
 
-  background-image: url("./resources/lego\ hut.jpg");
-  background-position: 90em;
-  background-size: 50rem;
+  background-image: url("./resources/rubies.jpeg");
+  background-size: cover;
+  align-self: center;
 
 }
 
@@ -86,14 +93,15 @@ th, td {
 
 .dumbleGRID {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 3fr 1fr 4fr;
     gap: 1%;
     min-height: 100vh;
+    height: 100vh;
     width: 100%;
 
     background-image: url("./resources/sunset.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 
 .dumbleGRID h1, .dumbleGRID ol, .dumbleGRID li {
@@ -102,13 +110,16 @@ th, td {
 
 .dumbleGRID img {
   width: 140%;
-  max-height: 90vh;
+  padding-left: 5vw;
 }
 
 .dumbleGRID .table {
    background-image: url("./resources/test.jpg");
    background-size: cover;
    background-position:left;
+   align-self: center;
+   height: 75%;
+   transform: translateY(-10%);
 }
 
 .dumbleGRID th, .dumbleGRID td {
@@ -128,8 +139,8 @@ th, td {
 
 }
 
-.snape h1, .snape ol, .snape li {
-  padding: 10px 0px 0px 0px;
+.snape h1 {
+  padding: 100px 0px 0px 0px;
 }
 
 .snape img {
@@ -138,12 +149,16 @@ th, td {
 }
 
 
-.snape .table {
+.snape .special {
   position: relative;
   z-index: 0;
+  align-self: center;
+  height: 60vh;
+  transform: translateY(-20%);
 }
 
-.snape .table::before {
+
+.snape .special::before {
   content: "";
   position: absolute;
   inset: 0; 
@@ -163,22 +178,20 @@ th, td {
 .McGonagall {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-    ". . text text"
-    ". . . teacher"
-    ". . . teacher"
-    "sign . . teacher";
+    "sign text text text"
+    "sign teacher teacher teacher"
+    "sign teacher teacher teacher";
 
-    gap: 1%;
     max-height: 100vh;
-    width: 100%;
+    height: 100vh;
 
     background-image: url("./resources/back cover.jpg");
     background-size: cover;
     background-position: top;
 
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-family: "Harry Potter";
   overflow: hidden;
 
@@ -187,17 +200,26 @@ th, td {
 .teacher {
   grid-area: teacher;
   align-self: end;
+  justify-self: end;
+  width: 31vw;
+  height: 81vh;
   
 }
 
 .sign {
   grid-area: sign;
+  align-self: end;
 }
 
 .text {
   grid-area: text;
-}
+  padding: 3vh 10vh 0vh 0vh;
+  align-self: end;
+  justify-self: end;
 
+  opacity: 0.9;
+  text-shadow: 10px 10px 10px hsla(40, 80%, 0%, 0.5);
+}
 
 
 
@@ -226,13 +248,61 @@ th, td {
 .more span {
   position: absolute;
 
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-family: "Harry Potter";
+  padding: 1vw 0vw 0vw 1vw;
 
 }
 
-/* 
-@keyframes bounceIn {
+/* HOMEPAGE */
+
+.homepage {
+  position: relative;
+  z-index: 0;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  height: 100vh;
+
+  font-size: 3.4rem;
+  text-align: right;
+
+}
+
+.homepage::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+  
+  background-image: url("./resources/dump/hogwarts.jpg");
+  background-size: cover;
+
+  filter: blur(2px);
+
+}
+
+.homepage img {
+  grid-area: 1 / 2 / span 1 / span 1;
+  padding: 1vw 0vw;
+
+  height: 70vh;
+  justify-self: center;
+  filter: invert(100%);
+}
+
+
+.homepage ul {
+  grid-area: 2 / 2 / span 1 / span 1;
+  justify-self: center;
+
+  font-size: 1rem;
+}
+
+
+
+/* @keyframes bounceIn {
   0% {
     transform: scale(0.1);
     opacity: 0;
@@ -243,5 +313,4 @@ th, td {
   }
   100% {
     transform: scale(1);
-  }
-} */
+  } */
