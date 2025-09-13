@@ -4,14 +4,12 @@
 }
 
 html {
-    /* UNIVERSAL TEXT ATTRIBUTES */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300; /* normal, 700 is bold */
-    font-style: normal; /* not italic */
-    text-align: left;
-    color: white;
-    font-size: 2.5vw; 
-    width: 100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300; /* normal, 700 is bold */
+  font-style: normal; /* not italic */
+
+  color: white;
+  font-size: 2.5vw; 
 }
 
 @font-face {
@@ -24,114 +22,112 @@ a {
 }
 
 span {
-  font-size: 3.5rem;
+  font-size: 8vw;
   font-family: "Harry Potter";
-  text-shadow: 10px 10px 10px hsla(100, 10%, 0%, 0.8);
-}
-
-h1 {
-  padding-top: 6vh;
-  font-size: 1.2rem;
-  text-shadow: 10px 10px 5px hsla(100, 10%, 0%, 0.8);
-}
-
-ol {
-  list-style: decimal;
-  font-size: 1.2rem;
+  text-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.8);
 }
 
 th, td {
-  border: 2px solid hsla(360, 100%, 100%, 0.9);
-  padding: 5px 5px;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.table {
+  height: clamp(40%, 60%, 100vh);
+  table-layout: fixed;
+  width: 100%;
+
+  overflow-wrap: break-word;
+  word-spacing: 3px;
+  line-height: 1.2;
 }
 
 /* HAGRID, GROUNDSKEEPER AT HOGWARTS */
 
 .haGRID {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 1%;
-    min-height: 100vh;
-    width: 100%;
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr 1fr;
 
-    position: relative;
-    z-index: 0;
-}
-
-.haGRID::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
+  height: 100vh;
+  overflow: hidden;
   background: url("./resources/lego\ hut\ two.png") center/cover no-repeat;
-  z-index: -1;
 }
 
 .haggard {
-    height: 90vh;
-    max-width: 160%;
-    align-self: end;
-    animation: bounceIn 2s ease-in-out 0ms alternate;
+  grid-area: 1 / 1 / span 2 / span 1;
+  align-self: end;
+
+  width: 100%;
+  height: 99%;
 }
 
-.table {
-  height: 70%;
-  width: 100%;
-  table-layout: fixed;
+.haGRID h1 {
+  grid-area: 1 / 2 / span 1 / span 2;
+  padding: 30px;
 
-  word-spacing: 5px;
-  overflow-wrap: break-word;
-  line-height: 1.2;
+  letter-spacing: 3px;
+  text-align: center;
+}
 
+.haGRID .table {
+  grid-area: 2 / 2 / span 1 / span 2;
+  align-self: start;
+  justify-self: center;
+
+  width: 70%;
   background: url("./resources/rubies.jpeg") center/cover no-repeat;
-  align-self: center;
 }
 
 /* DUMBLEDORE, HEADMASTER OF HOGWARTS */
 
 .dumbleGRID {
-    display: grid;
-    grid-template-columns: 3fr 1fr 4fr;
-    gap: 1%;
-    min-height: 100vh;
-    width: 100%;
+  display: grid;
+  overflow: hidden;
 
-    background: url("./resources/sunset.jpg") bottom/cover no-repeat;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+
+  height: 100vh;
+  width: 100vw;
+  
+  background: url("./resources/sunset.jpg") bottom/cover no-repeat;
 }
 
-.dumbleGRID h1, .dumbleGRID ol, .dumbleGRID li {
-  padding: 10px 0px 0px 50px;
-}
+.dumbleGRID h1 {
+  grid-area: 1 / 1 / span 1 / span 1;
+  letter-spacing: 3px;
 
-.dumbledore {
-    height: 90vh;
-    max-width: 160%;
-    align-self: end;
-}
-
-.dumbleGRID img {
-  width: 140%;
-  padding-left: 5vw;
+  padding: 5%;
+  text-align: center;
 }
 
 .dumbleGRID .table {
-   background: url("./resources/test.jpg") left/cover no-repeat;
-   align-self: center;
-   height: 75%;
-   transform: translateY(-10%);
+  grid-area: 2 / 1 / span 1 / span 2;
+  transform: scale(0.9);
+  max-width: 60vw;
+
+  align-self: start;
+  background: url("./resources/test.jpg") left/cover no-repeat;
 }
 
-.dumbleGRID th, .dumbleGRID td {
-  background-image: none;
+.dumbledore {
+  grid-area: 1 / 2 / span 2 / span 1;
+  min-width: 30vw;
+  height: 99vh;
+
+  align-self: end;
+  justify-self: center;
 }
 
 /* SEVERUS SNAPE, POTIONSMASTER */
 
 .snape {
     display: grid;
+    overflow: hidden;
+
     grid-template-columns: repeat(3, 2fr);
     gap: 1%;
-    min-height: 100vh;
+    height: clamp(100vh, 100vh, 100vh);
     width: 100%;
 
     background: url("./resources/snape/lab.JPG") right/contain;
@@ -180,6 +176,8 @@ th, td {
 
 .McGonagall {
     display: grid;
+    overflow: hidden;
+
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
@@ -187,7 +185,8 @@ th, td {
     "sign teacher teacher teacher"
     "sign teacher teacher teacher";
 
-    height: 100vh;
+    height: clamp(100vh, 100vh, 100vh);
+
     background: url("./resources/back cover.jpg") top/cover;
 
   font-size: 4rem;
@@ -235,13 +234,14 @@ th, td {
 
 .more {
     display: grid;
+    overflow: hidden;
+
     grid-template-columns: 1fr 3fr 3fr 3fr;
     gap: 1%;
-    height: 100vh;
-    width: 100%;
+  height: clamp(100vh, 100vh, 100vh);
+  width: clamp(100vw, 100vw, 100vh);
 
     background: url("./resources/spin.gif") top/cover;
-    overflow: hidden;
 }
 
 .more img {
@@ -264,9 +264,11 @@ th, td {
   z-index: 0;
 
   display: grid;
+  overflow: hidden;
+
   grid-template-columns: 4fr 1fr 2fr;
   grid-template-rows: 1fr 2fr;
-  height: 100vh;
+  height: clamp(100vh, 100vh, 100vh);
 
   font-size: 3.4rem;
   text-align: right;
@@ -338,66 +340,33 @@ img.quill:hover {
   }
 }
 
-@media only screen and (max-width: 600px){
-  .table {
-    visibility: hidden;
-  }
-
+@media only screen and (max-width: 600px) {
   .homepage img {
     max-width: 90vw;
   }
 
 /* MEDIA QUERIES FOR HAGRID */
-
-.haggard {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: end;
-    max-width: 100%;
-    max-height: 80%;
-    transform: scaleX(-1.5) translateX(-20%);
-}
-
-.haGRID {
-  max-height: 100vh;
-  overflow: hidden;
-}
-
-.haGRID h1 {
-  grid-column: 2;
-  align-self: start;
-  padding-left: 10px;
-
-  font-size: 5rem;
+.haGRID h1, .haGRID span {
+  font-size: 3.5em;
   text-align: center;
 }
 
-.haGRID span {
-  font-size: 10rem;
-  letter-spacing: 0.2rem;
+.haggard {
+  display: none;
 }
 
-.haGRID::before {
-  background-image: url("resources/lego\ hut\ two.png");
+.haGRID .table {
+  display: none;
 }
 
 /* MEDIA QUERIES FOR DUMBLEDORE */
 
-.dumbleGRID {
-  max-height: 100vh;
-}
-
 .dumbledore {
-    position: absolute;
-    max-width: 100vw;
-    height: 80%;
+    z-index: 10;
 }
 
 .dumbleGRID h1 {
-  align-self: start;
-  padding-left: 10px;
-
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -480,6 +449,7 @@ img.quill:hover {
   .cat {
     display: grid;
     position: absolute;
+    grid-row: 3;
 
     width: 100%;
     align-self: end;
@@ -515,17 +485,3 @@ img.quill:hover {
   }
 
 }
-
-
-/* @keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  } */
