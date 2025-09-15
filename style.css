@@ -122,55 +122,46 @@ th, td {
 /* SEVERUS SNAPE, POTIONSMASTER */
 
 .snape {
-    display: grid;
-    overflow: hidden;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  overflow: hidden;
 
-    grid-template-columns: repeat(3, 2fr);
-    gap: 1%;
-    height: clamp(100vh, 100vh, 100vh);
-    width: 100%;
-
-    background: url("./resources/snape/lab.JPG") right/contain;
-}
-
-.snape h1 {
-  padding-top: 100px;
+  height: 100vh;
+  background: url("./resources/snape/lab.JPG") center/contain;
 }
 
 .severus {
-    height: 90vh;
-    max-width: 160%;
-    align-self: end;
-    animation: bounceIn 2s ease-in-out 0ms alternate;
+  grid-area: 1 / 1 / span 2 / span 1;
+  height: 100vh;
+  width: 80%;
+  justify-self: center;
 }
 
-.snape img {
-  width: 140%;
-  height: 100vh;
+.snape h1 {
+  grid-area: 1 / 2;
+  text-align: center;
+  align-self: center;
 }
 
 .snape .special {
+  grid-area: 2 / 2;
+  align-self: start;
+  transform: scale(0.9);
+
   position: relative;
-  z-index: 0;
-  align-self: center;
-  height: 60vh;
-  transform: translateY(-20%);
+  z-index: 10;
 }
 
 .snape .special::before {
   content: "";
   position: absolute;
   inset: 0; 
-   background: url("./resources/snape/patronus.jpg") center/cover no-repeat;
+  background: url("./resources/snape/patronus.jpg") center/cover;
 
-  transform: scaleY(-1); 
+  transform: scale(-1); 
   z-index: -1;
-  opacity: 0.9;
 }
 
-.snape th, .snape td {
-  background-image: none;
-}
 
 /* PROFESSOR MCGONAGALL, TRANSFIGURATION */
 
