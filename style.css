@@ -138,16 +138,13 @@ th, td {
 }
 
 .snape h1 {
-  grid-area: 1 / 2 / span 1 / span 1;
+  grid-area: 1 / 2;
   align-self: center;
-
- 
+  width: 120%;
 }
 
 .snape .special {
   grid-area: 1 / 3;
-  align-self: end;
-
   margin: 10%;
 
   position: relative;
@@ -161,13 +158,12 @@ th, td {
   background: url("./resources/snape/patronus.jpg") center/cover;
 
   transform: scaleY(-1); 
+  z-index: 1;
+}
+
+.snape .special:hover {
   z-index: -1;
 }
-
-.special td {
-  padding-bottom: 5%;
-}
-
 
 /* PROFESSOR MCGONAGALL, TRANSFIGURATION */
 
@@ -182,7 +178,7 @@ th, td {
     "sign teacher teacher teacher"
     "sign teacher teacher teacher";
 
-    height: clamp(100vh, 100vh, 100vh);
+    height: 100vh;
 
     background: url("./resources/back cover.jpg") top/cover;
 
@@ -213,14 +209,6 @@ th, td {
 
   opacity: 0.9;
   text-shadow: 10px 10px 10px hsla(40, 80%, 0%, 0.5);
-}
-
-.McGonagall span {
-  position: absolute;
-  font-family: 'Courier New';
-  font-size: 1rem;
-  right: 0;
-  padding: 12% 21% 0 0;
 }
 
 .cat {
