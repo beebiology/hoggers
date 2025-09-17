@@ -63,7 +63,7 @@ th, td {
 }
 
 .haggard:hover {
-  cursor: url("/Users/lilmattysmacbook/Desktop/VS code/hogwarts website/resources/dump/baseball\ bat.png"), grabbing;
+  cursor: grabbing;
   transform:rotateZ(12deg) translateY(40%) translateX(-50%);
   transition: transform 12s ease-out 100ms;
 }
