@@ -256,8 +256,13 @@ th, td {
   height: 100vh;
 }
 
+.more img {
+  transition: 5s ease-in-out;
+}
+
 .more img:hover {
   transform: scale(1.1);
+  transform: rotate(10deg);
 
 }
 
