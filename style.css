@@ -140,6 +140,11 @@ th, td {
   height: 100vh;
   width: 70%;
   justify-self: start;
+  transition: 4s ease-in-out 1s;
+}
+
+.severus:hover {
+  transform: skew(10deg);
 }
 
 .snape h1 {
@@ -241,6 +246,7 @@ th, td {
   grid-column: 2;
   width: 140%;
   height: 100vh;
+  z-index: 10;
 }
 
 .flitwick {
@@ -261,7 +267,6 @@ th, td {
 }
 
 .more img:hover {
-  transform: scale(1.1);
   transform: rotate(10deg);
 
 }
