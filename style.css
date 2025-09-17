@@ -59,6 +59,13 @@ th, td {
 
   width: 100%;
   height: 99%;
+  transition: transform 8s ease-in-out 1s;
+}
+
+.haggard:hover {
+  cursor: url("/Users/lilmattysmacbook/Desktop/VS code/hogwarts website/resources/dump/baseball\ bat.png"), grabbing;
+  transform:rotateZ(12deg) translateY(40%) translateX(-50%);
+  transition: transform 12s ease-out 100ms;
 }
 
 .haGRID h1 {
@@ -117,11 +124,13 @@ th, td {
 
   align-self: end;
   justify-self: center;
-  transition: 2s;
+  transition: 1s ease-out;
+  animation: breathe 12s alternate infinite;
 }
 
 .dumbledore:hover {
-  transform: translateX(30%);
+ margin-left: 100%;
+ cursor: pointer;
 }
 
 /* SEVERUS SNAPE, POTIONSMASTER */
@@ -140,11 +149,18 @@ th, td {
   height: 100vh;
   width: 70%;
   justify-self: start;
-  transition: 4s ease-in-out 1s;
+  transition: 8s;
+  animation: breathe 8s alternate infinite;
 }
 
 .severus:hover {
-  transform: skew(10deg);
+  cursor: pointer;
+  filter: hue-rotate(220deg);
+}
+
+@keyframes breathe {
+  50% { transform: skew(-1deg) scale(1.01);}
+  100% { transform: skew(1deg);}
 }
 
 .snape h1 {
@@ -168,11 +184,14 @@ th, td {
   inset: 0; 
   background: url("./resources/snape/patronus.jpg") center/cover;
 
-  transform: scaleY(-1); 
-  z-index: 1;
+  transform: scaleY(-1);
 }
 
 .snape .special:hover {
+  cursor: help;
+}
+
+.snape .special:hover::before {
   z-index: -1;
 }
 
@@ -214,10 +233,14 @@ th, td {
   min-width: 35vw;
   height: 80vh;
   transition: 5s;
+  animation: breathe 50ms alternate infinite;
+
 }
 
 .teacher:hover {
   opacity: 0;
+  cursor: pointer;
+  animation: breathe 300ms alternate infinite
 }
 
 .cat {
@@ -247,6 +270,8 @@ th, td {
   width: 140%;
   height: 100vh;
   z-index: 10;
+
+  animation: tilt 20s ease-in-out infinite alternate;
 }
 
 .flitwick {
@@ -254,39 +279,43 @@ th, td {
   align-self: end;
   width: 120%;
   height: 80vh;
+
+  animation: tilt 15s ease-in-out infinite alternate;
 }
 
 .rarity {
   grid-column: 4;
   width: 150%;
   height: 100vh;
+
+  animation: tilt 10s ease-in-out infinite alternate;
 }
 
-.more img {
-  transition: 5s ease-in-out;
-}
 
-.more img:hover {
-  transform: rotate(10deg);
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 
+  100%{
+    transform: rotate(-10deg);
+  }
 }
 
 
 /* LANDING PAGE */
 
 .homepage {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+
+  height: 100vh;
   position: relative;
   z-index: 0;
-
-  display: grid;
-  overflow: hidden;
-
-  grid-template-columns: 4fr 1fr 2fr;
-  grid-template-rows: 1fr 2fr;
-  height: clamp(100vh, 100vh, 100vh);
-
-  font-size: 3.4rem;
-  text-align: right;
 }
 
 .homepage::before {
@@ -297,17 +326,20 @@ th, td {
   
   background-image: url("./resources/dump/hogwarts.jpg");
   background-size: cover;
-
   filter: blur(2px);
 }
 
 .homepage img {
-  grid-area: 1 / 2 / span 1 / span 1;
-  padding: 1vw 0vw;
-
+  grid-area: 1 / 2;
   height: 70vh;
+  
   justify-self: center;
   filter: invert(100%);
+}
+
+.homepage ul {
+  grid-area: 2 / 2 / span 1 / span 1;
+  justify-self: center;
 }
 
 img.quill {
@@ -337,14 +369,6 @@ img.quill:hover {
   100% {
     transform: translateX(20%);
   }
-
-}
-
-.homepage ul {
-  grid-area: 2 / 2 / span 1 / span 1;
-  justify-self: center;
-
-  font-size: 1.2rem;
 }
 
 /* MEDIA QUERIES FOR MOBILE */
