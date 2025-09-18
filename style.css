@@ -310,7 +310,8 @@ th, td {
 
 .homepage {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  overflow: hidden;
+  grid-template: 1fr 1fr / repeat(4, 1fr);
 
   height: 100vh;
   position: relative;
@@ -328,33 +329,40 @@ th, td {
 }
 
 .seal {
-  grid-area: 1 / 2;
+  grid-area: 1 / 2 / span 1 / span 3;
+  justify-self: center;
   height: 70vh;
-  
   filter: invert(100%);
 }
 
-.links{
+.gryffindor {
   grid-area: 2 / 2;
-  justify-self: start;
-  margin-left: 10%;
-  filter: invert(100%);
-
-  animation: grow 2s ease-in-out 1s;
-}
-
-.quill, .glasses {
-  height: 20vh;
-  transition: transform 300ms ease-in 0ms, filter 300ms ease-in 0ms;
+  justify-self: end;
 } 
 
-.glasses:hover, .quill:hover {
-  transform: scale(1.1);
-  filter: invert(40%) blur(0);
+.slytherin {
+  grid-area: 2 / 3;
+  justify-self: center;
 }
 
-@keyframes grow {
-  50% { filter: invert(30%);}
+.ravenclaw {
+  grid-area: 2 / 4;
+  justify-self: start;
+}
+
+.gryffindor img, .slytherin img, .ravenclaw img {
+  height: 25vh;
+  animation: flash 2s ease-in-out 500ms forwards;
+}
+
+.gryffindor:hover, .slytherin:hover, .ravenclaw:hover {
+  animation: flash 1s ease-in-out backwards;
+}
+
+@keyframes flash {
+  0% {filter: none; transform: scale(1);}
+  50% { filter: invert(100%); transform: scale(1.1);}
+  100% {filter:none; transform: scale(1);}
 }
 
 /* STORE */
@@ -429,7 +437,7 @@ th, td {
   to {transform: translateX(-12%);}
 }
 
-/* MEDIA QUERIES FOR MOBILE */
+/* MEDIA QUERIES */
 
 @media only screen and (min-width:600px) and (max-width:900px) {
   html {
@@ -438,9 +446,12 @@ th, td {
 }
 
 @media only screen and (max-width: 600px) {
-  .homepage img {
-    max-width: 99vw;
-    justify-self: center;
+  .seal {
+    max-width: 110vw;
+  }
+
+  .gryffindor img, .slytherin img, .ravenclaw img {
+  height: 22vh;
   }
 
   .table {
