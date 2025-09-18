@@ -355,7 +355,6 @@ th, td {
 
 @keyframes grow {
   50% {
-    transform: scale(1.05);
     filter: invert(30%) blur(0);
   }
 }
