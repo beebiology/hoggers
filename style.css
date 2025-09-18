@@ -513,12 +513,16 @@ th, td {
 }
 
 @media only screen and (max-width: 600px) {
+  .homepage {
+    height: 110vh;
+  }
+
   .seal {
-    max-width: 110vw;
+    max-width: 80vw;
   }
 
   .gryffindor img, .slytherin img, .ravenclaw img {
-  height: 22vh;
+  height: 20vh;
   }
 
   .table {
