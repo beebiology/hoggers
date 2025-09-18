@@ -463,7 +463,7 @@ th, td {
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: right;
-  height: 95vh;
+  height: 90vh;
 }
 
 .haGRID h1, .haGRID span {
@@ -488,10 +488,6 @@ th, td {
     height: 90vh;
 }
 
-.dumbleGRID {
-  height: 99vh;
-}
-
 .dumbleGRID h1 {
   font-size: 3rem;
   text-align: center;
@@ -506,7 +502,6 @@ th, td {
 
 .snape {
     overflow: hidden;
-    height: 99vh;
     background-position: top;
     background-size: contain;
 }
@@ -547,10 +542,6 @@ th, td {
 
   /* MEDIA QUERIES FOR MCGONAGALL */
 
-  .McGonagall {
-    height: 99vh;
-  }
-
   .text {
     grid-area: 1 / 1;
     justify-self: end;
@@ -577,10 +568,6 @@ th, td {
 
   .teacher, .rarity, .flitwick {
     display: none;
-  }
-
-  .more {
-    height: 99vh;
   }
 
   .more span {
