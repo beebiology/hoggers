@@ -438,13 +438,8 @@ th, td {
 }
 
 @media only screen and (max-width: 600px) {
-
-  .homepage {
-    height: 90vh;
-  }
-  
   .homepage img {
-    max-width: 95vw;
+    max-width: 99vw;
     justify-self: center;
   }
 
