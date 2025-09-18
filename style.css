@@ -371,6 +371,79 @@ img.quill:hover {
   }
 }
 
+/* ALL STUDENTS PAGE */
+
+.shrine {
+  display: grid;
+  grid-template: 1fr 2fr 1fr / 1fr 1fr;
+
+  height: 100vh;
+  overflow: hidden;
+  background: url("./resources/students/peacock.jpg");
+  animation: scroll 200s alternate infinite;
+}
+
+.krishna {
+  grid-area: 1 / 1;
+  height: 90vh;
+  width: 50vw;
+  transform: scale(0.7);
+  justify-self: end;
+  animation: shadow 15s alternate infinite;
+}
+
+.disney {
+  grid-area: 1 / 2;
+  height: 90vh;
+  width: 40vw;
+  transform: scale(0.7);
+  justify-self: start;
+  animation: shadow 15s alternate infinite;
+}
+
+.disney:hover, .krishna:hover {
+  cursor: pointer;
+}
+
+.disney:active, .krishna:active {
+  transform: scale(1.01);
+}
+
+.shrine h1, .shrine h2 {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  grid-area: 1 / 1 / span 1 / span 2;
+  width: 1000%;
+  animation: scroll-text 20s alternate infinite;
+}
+
+.shrine h2 {
+  grid-area: 2 / 1 / span 1 / span 2;
+  animation: scroll-text 20s alternate-reverse infinite;
+}
+
+.shrine h3 {
+  display: none;
+}
+
+
+@keyframes shadow {
+  0% {filter:brightness(10%) drop-shadow(0px -300px 300px black);}
+  100% {filter:brightness(110%) drop-shadow(0px -10px 5px black);}
+}
+
+@keyframes scroll {
+  from {background-position: 0 0;}
+  to {background-position: -1000px 0;}
+}
+
+@keyframes scroll-text {
+  from {transform: translateX(12%);}
+  to {transform: translateX(-12%);}
+}
+
+
 /* MEDIA QUERIES FOR MOBILE */
 
 @media only screen and (min-width:600px) and (max-width:900px) {
@@ -521,6 +594,17 @@ img.quill:hover {
 
     justify-self: end;
     transform: scaleX(-1.4) translateY(20%);
+  }
+
+  /* MEDIA QUERIES FOR ALL STUDENS PAGE */
+
+  .shrine img, .shrine h1, .shrine h2 {
+    display: none;
+  }
+
+  .shrine h3{
+    display:flex;
+    font-size: 10rem;
   }
 
 }
