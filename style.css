@@ -338,9 +338,9 @@ th, td {
 .links{
   grid-area: 2 / 2;
   justify-self: start;
-  filter: invert(100%) blur(1px);
+  filter: invert(100%);
 
-  animation: grow 2s ease-in-out 2s;
+  animation: grow 2s ease-in-out 1s;
 }
 
 .quill, .glasses, .third {
@@ -349,14 +349,12 @@ th, td {
 } 
 
 .glasses:hover, .quill:hover, .third:hover {
-  transform: scale(1.2) translateX(2%) translateY(-2%);
+  transform: scale(1.1);
   filter: invert(40%) blur(0);
 }
 
 @keyframes grow {
-  50% {
-    filter: invert(30%) blur(0);
-  }
+  50% { filter: invert(30%);}
 }
 
 /* ALL STUDENTS PAGE */
@@ -451,6 +449,7 @@ th, td {
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: right;
+  height: 90vh;
 }
 
 .haGRID h1, .haGRID span {
@@ -464,15 +463,19 @@ th, td {
 
 .haggard {
   grid-area: 2 / 1;
-  height: 75vh;
-  width: 110vw;
+  height: 65vh;
+  width: 100vw;
 }
 
 /* MEDIA QUERIES FOR DUMBLEDORE */
 
 .dumbledore {
     z-index: 1;
-    height: 95vh;
+    height: 90vh;
+}
+
+.dumbleGRID {
+  height: 90vh;
 }
 
 .dumbleGRID h1 {
@@ -489,6 +492,7 @@ th, td {
 
 .snape {
     overflow: hidden;
+    height: 90vh;
     background-position: top;
     background-size: contain;
 }
@@ -522,18 +526,22 @@ th, td {
   grid-area: 1 / 1 / span 2 / span 4;
   z-index: 0;
 
-  align-self: center;
+  align-self: start;
   font-size: 2.5rem;
 }
 
 
   /* MEDIA QUERIES FOR MCGONAGALL */
 
+  .McGonagall {
+    height: 90vh;
+  }
+
   .text {
     grid-area: 1 / 1;
     justify-self: end;
 
-    font-size: 9rem;
+    font-size: 8rem;
     text-align: center;
   }
 
@@ -555,6 +563,10 @@ th, td {
 
   .teacher, .rarity, .flitwick {
     display: none;
+  }
+
+  .more {
+    height: 90vh;
   }
 
   .more span {
