@@ -647,14 +647,14 @@ th, td {
 }
 
 .homepage img {
-  margin-top: 110%;
+  margin-top: 105%;
   max-width: 32.5vw;
 }
 
 .seal {
   position: absolute;
   max-height: 20%;
-  transform: scale(3) translateY(-62%);  
+  transform: scale(3) translateY(-60%);  
   left: 36%;
 }
 
