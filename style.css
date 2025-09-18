@@ -331,7 +331,6 @@ th, td {
   grid-area: 1 / 2;
   height: 70vh;
   
-  justify-self: start;
   filter: invert(100%);
 }
 
@@ -359,12 +358,27 @@ th, td {
 
 /* ALL STUDENTS PAGE */
 
+.commonroom {
+  display: grid;
+  height: 100vh;
+  color: black;
+  grid-template: 1fr 4fr / repeat(7, 1fr);
+  background: url("./resources/students/sloth.jpg") left/cover;
+}
+
+.ron {
+  transform: scaleX(-1);
+}
+
+/* STORE */
+
 .shrine {
   display: grid;
   grid-template: repeat(3, 1fr) / 1fr 1fr;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
-  background: url("./resources/students/peacock.jpg");
+  background: url("./resources/dump/store/peacock.jpg");
   animation: scroll 200s alternate infinite;
 }
 
@@ -449,7 +463,7 @@ th, td {
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: right;
-  height: 90vh;
+  height: 95vh;
 }
 
 .haGRID h1, .haGRID span {
@@ -475,7 +489,7 @@ th, td {
 }
 
 .dumbleGRID {
-  height: 90vh;
+  height: 99vh;
 }
 
 .dumbleGRID h1 {
@@ -492,7 +506,7 @@ th, td {
 
 .snape {
     overflow: hidden;
-    height: 90vh;
+    height: 99vh;
     background-position: top;
     background-size: contain;
 }
@@ -534,7 +548,7 @@ th, td {
   /* MEDIA QUERIES FOR MCGONAGALL */
 
   .McGonagall {
-    height: 90vh;
+    height: 99vh;
   }
 
   .text {
@@ -566,7 +580,7 @@ th, td {
   }
 
   .more {
-    height: 90vh;
+    height: 99vh;
   }
 
   .more span {
