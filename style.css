@@ -339,7 +339,7 @@ th, td {
   justify-self: start;
   filter: invert(100%);
 
-  animation: grow 2s ease-in-out 1s;
+  animation: grow 2s ease-in-out 6s;
 }
 
 .quill, .glasses, .third {
@@ -463,6 +463,7 @@ th, td {
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: right;
+  height: 90vh;
 }
 
 .haGRID h1, .haGRID span {
