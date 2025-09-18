@@ -357,20 +357,6 @@ th, td {
   50% { filter: invert(30%);}
 }
 
-/* ALL STUDENTS PAGE */
-
-.commonroom {
-  display: grid;
-  height: 100vh;
-  color: black;
-  grid-template: 1fr 4fr / repeat(7, 1fr);
-  background: url("./resources/students/sloth.jpg") left/cover;
-}
-
-.ron {
-  transform: scaleX(-1);
-}
-
 /* STORE */
 
 .shrine {
@@ -453,12 +439,12 @@ th, td {
 
 @media only screen and (max-width: 600px) {
   .homepage img {
-    max-width: 99vw;
-    justify-self: start;
+    max-width: 95vw;
+    justify-self: center;
   }
 
   .quill, .glasses {
-    height: 24vh;
+    height: 20vh;
   }
 
   .table {
