@@ -344,7 +344,7 @@ th, td {
 }
 
 .quill, .glasses {
-  height: 18vh;
+  height: 20vh;
   transition: transform 300ms ease-in 0ms, filter 300ms ease-in 0ms;
 } 
 
