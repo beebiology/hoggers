@@ -344,7 +344,7 @@ th, td {
 }
 
 .quill, .glasses {
-  height: 20vh;
+  height: 18vh;
   transition: transform 300ms ease-in 0ms, filter 300ms ease-in 0ms;
 } 
 
@@ -441,10 +441,6 @@ th, td {
   .homepage img {
     max-width: 95vw;
     justify-self: center;
-  }
-
-  .quill, .glasses {
-    height: 18vh;
   }
 
   .table {
