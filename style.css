@@ -439,7 +439,7 @@ th, td {
   display: grid;
   height: 100vh;
   overflow: hidden;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(3, 1fr) / 2fr 2fr 2fr 1.6fr;
 }
 
 .icons {
@@ -458,7 +458,7 @@ th, td {
 .children {
   grid-row: 1 / -1;
   align-self: end;
-  max-width: 25vw;
+  max-width: 30vw;
   width: 100%;
 }
 
@@ -471,6 +471,7 @@ th, td {
 
 .ron {
   grid-column: 2;
+  min-width: 100%;
   z-index: 4;
   min-height: 50%;
 }
@@ -645,15 +646,16 @@ th, td {
   display: block;
 }
 
-.seal {
-  display: block;
-  max-height: 22vh;
-  transform: scale(3) translateY(30%); 
-  margin: 5% 5% 70%;
+.homepage img {
+  margin-top: 101%;
+  max-width: 32.5vw;
 }
 
-.homepage img {
-  max-width: 32.5vw;
+.seal {
+  position: absolute;
+  max-height: 20%;
+  transform: scale(3) translateY(-62%);  
+  left: 36%;
 }
 
   /* MEDIA QUERIES FOR STORE PAGE */
@@ -739,8 +741,4 @@ th, td {
 .column2 {grid-row: 2; background: url("./resources/students/sloth.jpg") center/cover; z-index: 3;}
 .column3 {grid-row: 3; background: url("./resources/back\ cover.jpg") center/cover;}
 .column4 {grid-row: 4; background: url("./resources/test.jpg") center/cover; z-index: 5;}
-
-
-
-
 }
