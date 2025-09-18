@@ -513,18 +513,6 @@ th, td {
 }
 
 @media only screen and (max-width: 600px) {
-  .homepage {
-    height: 110vh;
-  }
-
-  .seal {
-    max-width: 80vw;
-  }
-
-  .gryffindor img, .slytherin img, .ravenclaw img {
-  height: 20vh;
-  }
-
   .table {
     display: none;
   }
@@ -650,6 +638,23 @@ th, td {
     max-height: 92vh;
     animation: tilt 80s alternate infinite;
   }
+
+  /* MEDIA QUERIES FOR THE LANDING PAGE */
+
+.homepage {
+  display: block;
+}
+
+.seal {
+  display: block;
+  max-height: 22vh;
+  transform: scale(3) translateY(30%); 
+  margin: 5% 5% 70%;
+}
+
+.homepage img {
+  max-width: 32.5vw;
+}
 
   /* MEDIA QUERIES FOR STORE PAGE */
 
