@@ -477,7 +477,7 @@ th, td {
 .haggard {
   grid-area: 2 / 1;
   height: 75vh;
-  width: 100vw;
+  width: 110vw;
 }
 
 /* MEDIA QUERIES FOR DUMBLEDORE */
