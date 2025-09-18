@@ -477,7 +477,7 @@ th, td {
 
 .haggard {
   grid-area: 2 / 1;
-  height: 72vh;
+  height: 70vh;
   width: 110vw;
 
   transform: translate(-5%);
