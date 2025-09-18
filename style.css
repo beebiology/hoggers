@@ -310,7 +310,7 @@ th, td {
 
 .homepage {
   display: grid;
-  grid-template: 2fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr / 1fr 1fr;
 
   height: 100vh;
   position: relative;
@@ -337,17 +337,18 @@ th, td {
 .links{
   grid-area: 2 / 2;
   justify-self: start;
+  margin-left: 10%;
   filter: invert(100%);
 
-  animation: grow 2s ease-in-out 6s;
+  animation: grow 2s ease-in-out 1s;
 }
 
-.quill, .glasses, .third {
-  height: 15vh;
+.quill, .glasses {
+  height: 20vh;
   transition: transform 300ms ease-in 0ms, filter 300ms ease-in 0ms;
 } 
 
-.glasses:hover, .quill:hover, .third:hover {
+.glasses:hover, .quill:hover {
   transform: scale(1.1);
   filter: invert(40%) blur(0);
 }
@@ -452,7 +453,12 @@ th, td {
 
 @media only screen and (max-width: 600px) {
   .homepage img {
-    max-width: 90vw;
+    max-width: 99vw;
+    justify-self: start;
+  }
+
+  .quill, .glasses {
+    height: 24vh;
   }
 
   .table {
@@ -477,8 +483,8 @@ th, td {
 
 .haggard {
   grid-area: 2 / 1;
-  height: 70vh;
-  width: 110vw;
+  height: 68vh;
+  width: 106vw; 
 
   transform: translate(-5%);
 }
