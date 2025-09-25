@@ -145,7 +145,7 @@
 
 .seal {
   position: absolute;
-  left: -3%;
+  left: -4%;
 }
 
   /* MEDIA QUERIES FOR STORE PAGE */
@@ -236,16 +236,33 @@
 /* MEDIA QUERIES FOR NAVIGATION */
 
 .nav {
-  margin-top: 52%;
-  left: 81%;
+  display: none;
 }
 
 .arrow {
   display: none;
 }
 
-.nav .gryffindor, .nav .slytherin, .nav .ravenclaw {
-  display: none;
+
+footer {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 90%;
+
+  z-index: 101;
+  font-size: 4rem;
+}
+
+footer a {
+  background-color: red;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 3px;
+  color: white;
 }
 
 }

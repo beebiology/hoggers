@@ -17,10 +17,6 @@ html {
   src: url(./resources/fonts/harry-p-font/HarryP-MVZ6w.ttf) format("truetype");
 }
 
-a {
-  color: rgb(130, 130, 255);
-}
-
 span {
   font-size: 8vw;
   font-family: "Harry Potter";
@@ -571,4 +567,8 @@ th, td {
   0% {transform: scale(1);}
   50% {transform: scale(1.1);}
   100% {transform: scale(1);}
+}
+
+footer {
+  display: none;
 }
