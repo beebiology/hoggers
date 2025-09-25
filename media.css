@@ -53,10 +53,18 @@
 
 /* MEDIA QUERIES FOR SNAPE */
 
+
 .snape {
-    overflow: hidden;
-    background-position: top;
-    background-size: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.snape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("resources/snape/lab.JPG") top/contain no-repeat;
+  z-index: 0;
 }
 
 .snape h1 {
@@ -64,7 +72,7 @@
   align-self: center;
 
   margin: 12%;
-  z-index: 3;
+  z-index: 100;
 }
 
 .severus {
@@ -266,6 +274,11 @@ footer a {
   border: 2px solid black;
   border-radius: 40px;
   background-image: url(resources/rubies.jpeg);
+}
+
+.storefooter {
+  right: 55%;
+  bottom: 3%;
 }
 
 }
