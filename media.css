@@ -9,6 +9,10 @@
     display: none;
   }
 
+  .splash img {
+    height: 30vh;
+  }
+
 
 /* MEDIA QUERIES FOR HAGRID */
 .haGRID {

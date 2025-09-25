@@ -580,3 +580,35 @@ th, td {
 footer {
   display: none;
 }
+
+/* SPLASH */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+
+  z-index: 1000;
+  animation: reveal 600ms ease-in-out forwards 1.5s;
+}
+
+.splash img {
+  height: 35vh;
+  padding-right: 1vw;
+  filter:grayscale(0.8);
+}
+
+.splash h1 {
+  font-size: 1.5em;
+  letter-spacing: 1.5vw;
+
+  color: rgb(203, 203, 203);
+}
+
+@keyframes reveal {
+  0% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
