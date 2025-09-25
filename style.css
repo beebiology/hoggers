@@ -598,14 +598,13 @@ footer {
 .splash img {
   height: 35vh;
   padding-right: 1vw;
-  filter:grayscale(0.8);
 }
 
 .splash h1 {
   font-size: 1.5em;
   letter-spacing: 1.5vw;
 
-  color: rgb(203, 203, 203);
+  color: rgb(219, 218, 218);
 }
 
 @keyframes reveal {
