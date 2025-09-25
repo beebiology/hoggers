@@ -64,14 +64,14 @@
   align-self: center;
 
   margin: 12%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .severus {
   grid-area: 1 / 1 / span 2 / span 4;
   width: 100vw;
 
-  z-index: 1;
+  z-index: 3;
 }
 
 .snape span {
@@ -86,7 +86,7 @@
 
 .snape .special {
   grid-area: 1 / 1 / span 2 / span 4;
-  z-index: 0;
+  z-index: 2;
 
   align-self: start;
   font-size: 2.5rem;
@@ -100,12 +100,13 @@
 
     font-size: 8rem;
     text-align: center;
+    z-index: 2;
   }
 
   .sign {
     grid-area: 1 / 1 / span 2 / span 1;
     height: 72vh;
-    z-index: 1;
+    z-index: 0;
   }
 
   .cat {
@@ -124,12 +125,14 @@
 
   .more span {
     font-size: 8rem;
+    z-index: 2;
   }
 
   .lucius {
     grid-column: 1 / span 4;
     max-height: 92vh;
     animation: tilt 80s alternate infinite;
+    z-index: 0;
   }
 
   /* MEDIA QUERIES FOR THE LANDING PAGE */
@@ -215,7 +218,8 @@
   max-height: 90vh;
 
   transform: translateX(100px) scale(0.9) translateY(100px);
-  z-index: 3;
+  z-index: 0;
+  overflow: hidden;
 }
 
 .luna { 
@@ -228,9 +232,9 @@
 }
 
 .column1 {grid-row: 1; background: url("./resources/sunset.jpg") center/cover; z-index: 0;}
-.column2 {grid-row: 2; background: url("./resources/students/sloth.jpg") center/cover; z-index: 3;}
+.column2 {grid-row: 2; background: url("./resources/students/sloth.jpg") center/cover; z-index: 2;}
 .column3 {grid-row: 3; background: url("./resources/back\ cover.jpg") center/cover;}
-.column4 {grid-row: 4; background: url("./resources/test.jpg") center/cover; z-index: 5;}
+.column4 {grid-row: 4; background: url("./resources/test.jpg") center/cover; z-index: 0;}
 
 
 /* MEDIA QUERIES FOR NAVIGATION */
@@ -255,6 +259,7 @@ footer {
 
   z-index: 101;
   opacity: 90%;
+  z-index: 0;
 }
 
 footer a {
