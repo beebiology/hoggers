@@ -118,7 +118,7 @@
   .sign {
     grid-area: 1 / 1 / span 2 / span 1;
     height: 72vh;
-    z-index: 0;
+    z-index: 1;
   }
 
   .cat {
@@ -127,6 +127,7 @@
     grid-area: 1 / 1 / span 2 / span 1;
     align-self: end;
     width: 100vw;
+    z-index: 1;
   }
 
   /* MEDIA QUERIES FOR "AND MANY MORE..." */

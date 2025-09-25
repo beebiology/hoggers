@@ -529,7 +529,7 @@ th, td {
   right: 0;
   top: 50vh;
 
-  transform: rotate(90deg) translateY(-68%);
+  transform: rotate(90deg) translateY(-70%);
   z-index: 100;
 }
 
@@ -551,9 +551,20 @@ th, td {
   cursor:pointer;
 }
 
-.arrow:active + .nav {
+.arrow:hover + .nav {
   left: 89%;
 }
+
+.arrow {
+  animation: notice 2s ease-in-out 3s forwards;
+}
+
+@keyframes notice {
+  0% {transform: rotate(90deg) translateY(-70%);}
+  50% {transform: scale(1) rotate(90deg) translateY(-8vw);}
+  100% {transform: rotate(90deg) translateY(-70%);}
+}
+
 
 .nav:hover {
   left: 89%;
