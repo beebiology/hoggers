@@ -342,26 +342,32 @@ th, td {
 }
 
 .gryffindor {
-  grid-area: 2 / 2;
+  grid-area: 2 / 1;
   justify-self: end;
 } 
 
 .slytherin {
-  grid-area: 2 / 3;
+  grid-area: 2 / 2;
   justify-self: center;
 }
 
 .ravenclaw {
-  grid-area: 2 / 4;
+  grid-area: 2 / 3;
   justify-self: start;
 }
 
-.gryffindor img, .slytherin img, .ravenclaw img, .home img {
+.hufflepuff-home {
+  grid-area: 2 / 4;
+  justify-self: end;
+  cursor: not-allowed;
+}
+
+.gryffindor img, .slytherin img, .ravenclaw img, .home img, .hufflepuff-home {
   height: 25vh;
   animation: flash 2s ease-in-out 500ms forwards;
 }
 
-.gryffindor:hover, .slytherin:hover, .ravenclaw:hover {
+.gryffindor:hover, .slytherin:hover, .ravenclaw:hover, .hufflepuff:hover{
   animation: flash 1s ease-in-out backwards;
 }
 
@@ -490,7 +496,7 @@ th, td {
   grid-column: 3;
   max-height: 90vh;
   transform: translateX(-50px);
-  z-index: 2;
+  z-index: -2;
 }
 
 .hermione2 {
@@ -498,11 +504,12 @@ th, td {
   max-height: 90vh;
 
   transform: translateX(100px) scale(0.9) translateY(100px);
-  z-index: 3;
+  z-index: -1;
 }
 
 .luna { 
   grid-column: 4;
+  transform: translateX(5vw) translateY(-6vh) scale(1.4);
 }
 
 .backgrounds {

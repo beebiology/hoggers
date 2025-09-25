@@ -154,6 +154,10 @@
   max-width: 32.5vw;
 }
 
+.hufflepuff-home {
+  display: none;
+}
+
 .seal {
   position: absolute;
   left: -4%;
@@ -218,7 +222,7 @@
   grid-row: 3;
   max-height: 90vh;
   transform: translateX(-50px);
-  z-index: 2;
+  z-index: -2;
 }
 
 .hermione2 {
@@ -226,12 +230,13 @@
   max-height: 90vh;
 
   transform: translateX(100px) scale(0.9) translateY(100px);
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 
 .luna { 
   grid-row: 4;
+  height: 40vh;
 }
 
 .backgrounds {
