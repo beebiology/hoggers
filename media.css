@@ -276,6 +276,18 @@ footer a {
   background-image: url(resources/rubies.jpeg);
 }
 
+.staff-footer a {
+  background: url(resources/dump/store/peacock.jpg) bottom/cover;
+}
+
+.student-footer a {
+  background-image: url(resources/lego\ hut\ two.png);
+}
+
+.storefooter a {
+  background-image: url(resources/students/test-unscreen.gif);
+}
+
 .storefooter {
   right: 55%;
   bottom: 3%;
