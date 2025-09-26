@@ -335,35 +335,39 @@ th, td {
 }
 
 .seal {
-  grid-area: 1 / 2 / span 1 / span 3;
-  justify-self: center;
-  height: 70vh;
+  grid-area: 1 / 1 / span 1 / span 3;
+  justify-self: end;
+  height: 65vh;
   filter: invert(100%);
 }
 
 .gryffindor {
-  grid-area: 2 / 1;
+  grid-area: 2 / 1 / span 1 / span 1;
   justify-self: end;
+  align-self: center;
 } 
 
 .slytherin {
-  grid-area: 2 / 2;
+  grid-area: 2 / 2 / span 1 / span 1;
   justify-self: center;
+  align-self: center;
 }
 
 .ravenclaw {
-  grid-area: 2 / 3;
+  grid-area: 2 / 3 / span 1 / span 1;
   justify-self: start;
+  align-self: center;
 }
 
 .hufflepuff-home {
-  grid-area: 2 / 4;
+  grid-area: 2 / 4 / span 1 / span 1;
   justify-self: end;
   cursor: not-allowed;
+  align-self: center;
 }
 
 .gryffindor img, .slytherin img, .ravenclaw img, .home img, .hufflepuff-home {
-  height: 25vh;
+  height: 30vh;
   animation: flash 2s ease-in-out 500ms forwards;
 }
 
