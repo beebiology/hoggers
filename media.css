@@ -42,7 +42,7 @@
 
 .dumbledore {
     z-index: 1;
-    height: 90vh;
+    height: 95vh;
 }
 
 .dumbleGRID h1 {
@@ -66,7 +66,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("resources/snape/lab.JPG") top/contain no-repeat;
+  background: url("resources/snape/lab.JPG") top/cover no-repeat;
   z-index: 0;
 }
 
@@ -96,11 +96,7 @@
 }
 
 .snape .special {
-  grid-area: 1 / 1 / span 2 / span 4;
-  z-index: 2;
-
-  align-self: start;
-  font-size: 2.5rem;
+  display: none;
 }
 
   /* MEDIA QUERIES FOR MCGONAGALL */
@@ -147,8 +143,8 @@
 
   .lucius {
     grid-column: 1 / span 4;
-    max-height: 92vh;
-    animation: tilt 80s alternate infinite;
+    max-height: 95vh;
+    animation: tilt 30s alternate infinite;
     z-index: 0;
   }
 
