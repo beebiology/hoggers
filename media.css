@@ -151,19 +151,21 @@
   /* MEDIA QUERIES FOR THE LANDING PAGE */
 
 .homepage {
-  display: grid;
-  grid-template: 1 / 1 / span 2 / span 3;
   justify-content: center;
-
   width: 100vw;
-  gap: 5vw;
-  padding-left: 4vw;
+}
+
+.slytherin {
+  grid-area: 2 / 2 / span 1 / span 2;
+}
+
+.ravenclaw {
+  grid-area: 2 / 4;
 }
 
 .gryffindor img, .slytherin img, .ravenclaw img {
-  grid-area: 2 / 1 / span 1 / span 3;
-  max-width: 28vw;
-  max-height: 22vh;
+  max-width: 30vw;
+  max-height: 20vh;
   margin-bottom: 15vh;
 }
 
@@ -172,10 +174,10 @@
 }
 
 .seal {
-  grid-area: 1 / 1 / span 1 / span 3;
+  grid-area: 1 / 1 / span 1 / span 4;
+  justify-self: center;
   max-height: 60vh;
   margin-top: 2vh;
-  padding-left: 4%;
   opacity: 0.8;
 }
 
@@ -302,3 +304,5 @@ footer a {
 }
 
 }
+
+/*  September 26th  */
