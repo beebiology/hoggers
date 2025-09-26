@@ -654,23 +654,27 @@ footer {
   position: fixed;
   inset: 0;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  background: rgb(0, 0, 0);
+  background: black;
+  width: 100vw;
 
   z-index: 1000;
-  animation: reveal 600ms ease-in-out forwards 1.5s;
+  /* animation: reveal 600ms ease-in-out forwards 1.5s; */
   /* default is 600ms and 1.5s */
 }
 
 .splash img {
   height: 35vh;
-  padding-right: 1vw;
+  border: 1px solid black;
+  background-color: rgba(219, 218, 218, 0.9);
+  padding-left: 45vw;
 }
 
 .splash h1 {
   font-size: 1.5em;
-  letter-spacing: 1.5vw;
+  letter-spacing: 1.2vw;
+  padding-left: 3vw;
 
   color: rgb(219, 218, 218);
 }
