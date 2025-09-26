@@ -660,7 +660,7 @@ footer {
   width: 100vw;
 
   z-index: 1000;
-  /* animation: reveal 600ms ease-in-out forwards 1.5s; */
+  animation: reveal 600ms ease-in-out forwards 1.5s;
   /* default is 600ms and 1.5s */
 }
 
