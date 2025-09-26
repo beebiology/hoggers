@@ -599,6 +599,10 @@ th, td {
   transition: left 400ms ease-out;
 }
 
+.nav img {
+  max-height: 25vh;
+}
+
 .arrow:hover {
   cursor:pointer;
 }
