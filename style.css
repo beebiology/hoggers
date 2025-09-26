@@ -645,7 +645,7 @@ footer {
 .splash {
   position: fixed;
   inset: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(0, 0, 0);
