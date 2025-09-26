@@ -23,7 +23,7 @@
 /* MEDIA QUERIES FOR HAGRID */
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
-  background-position: center;
+  background-position: left;
   height: 90vh;
 }
 
