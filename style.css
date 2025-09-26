@@ -460,22 +460,23 @@ th, td {
 
 .icons {
   grid-row: 1;
-  cursor: pointer;
   justify-self: center;
   max-height: 33.333vh;
   z-index: 10;
 }
 
-.gryffindor {grid-column: 1; z-index: 1;}
-.slytherin {grid-column: 2;}
-.ravenclaw {grid-column: 3;}
-.hufflepuff {grid-column: 4;}
+.gryffindore {grid-column: 1; z-index: 1;}
+.slytherine {grid-column: 2;}
+.ravenclawe {grid-column: 3;}
+.hufflepuffe {grid-column: 4;}
 
 .children {
   grid-row: 1 / -1;
   align-self: end;
   max-width: 30vw;
   width: 100%;
+
+  cursor: pointer;
 }
 
 .harry {
@@ -488,7 +489,7 @@ th, td {
 .ron {
   grid-column: 2;
   min-width: 100%;
-  min-height: 50%;
+  min-height: 45%;
   z-index: 4;
 }
 
@@ -505,6 +506,8 @@ th, td {
 
   transform: translateX(100px) scale(0.9) translateY(100px);
   z-index: 1;
+
+  cursor: default;
 }
 
 .luna { 
@@ -521,6 +524,47 @@ th, td {
 .column2 {grid-column: 2; background: url("./resources/students/sloth.jpg") center/cover; z-index: 3;}
 .column3 {grid-column: 3; background: url("./resources/back\ cover.jpg") center/cover;}
 .column4 {grid-column: 4; background: url("./resources/test.jpg") center/cover; z-index: 2;}
+
+.harry:active {
+  transform: translateX(273%);
+  z-index: 12;
+}
+
+.harry:active ~ .column1 {
+  grid-column: 1 / -1;
+  z-index: 11;
+}
+
+.ron:active {
+  z-index: 0;
+}
+
+.ron:active ~ .column2 {
+  grid-column: 1 / -1;
+  z-index: 11;
+}
+
+.hermione:active {
+  z-index: 12;
+}
+
+.hermione:active + .hermione2 {
+  z-index: 12;
+}
+
+.hermione:active ~ .column3 {
+  grid-column: 1 / -1;
+   z-index: 11;
+}
+
+.students:has(.luna:active) .icons {
+  opacity: 0;
+}
+
+.students:has(.luna:active) img {
+  opacity: 0;
+}
+
 
 /* NAVIGATION BAR */
 
@@ -603,7 +647,8 @@ footer {
   background: rgb(0, 0, 0);
 
   z-index: 1000;
-  animation: reveal 600ms ease-in-out forwards 1.5s;
+  animation: reveal 600ms ease-in-out forwards 1.2s;
+  /* default is 600ms and 1.5s */
 }
 
 .splash img {

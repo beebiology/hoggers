@@ -196,10 +196,10 @@
   align-self: start;
 }
 
-.gryffindor {grid-row: 1; z-index: 1;}
-.slytherin {grid-row: 2;}
-.ravenclaw {grid-row: 3;}
-.hufflepuff {grid-row: 4;}
+.gryffindore {grid-row: 1; z-index: 1;}
+.slytherine {grid-row: 2;}
+.ravenclawe {grid-row: 3;}
+.hufflepuffe {grid-row: 4;}
 
 .children {
   grid-column: 1 / -1;
