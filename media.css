@@ -155,12 +155,19 @@
   /* MEDIA QUERIES FOR THE LANDING PAGE */
 
 .homepage {
-  display: block;
+  display: grid;
+  grid-template: 1 / 1 / span 2 / span 3;
+  justify-content: center;
+
+  width: 100vw;
+  gap: 5vw;
+  padding-left: 4vw;
 }
 
 .gryffindor img, .slytherin img, .ravenclaw img {
-  margin-top: 116%;
-  max-width: 32.5vw;
+  grid-area: 2 / 1 / span 1 / span 3;
+  max-width: 28vw;
+  max-height: 20vh;
 }
 
 .hufflepuff-home {
@@ -168,8 +175,10 @@
 }
 
 .seal {
-  position: absolute;
-  left: -4%;
+  grid-area: 1 / 1 / span 1 / span 3;
+  max-height: 60vh;
+  margin-top: 10vh;
+  padding-left: 4%;
 }
 
   /* MEDIA QUERIES FOR STORE PAGE */

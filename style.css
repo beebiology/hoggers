@@ -651,7 +651,7 @@ footer {
   background: rgb(0, 0, 0);
 
   z-index: 1000;
-  animation: reveal 600ms ease-in-out forwards 1.2s;
+  animation: reveal 600ms ease-in-out forwards 1s;
   /* default is 600ms and 1.5s */
 }
 
