@@ -167,7 +167,7 @@
 .gryffindor img, .slytherin img, .ravenclaw img {
   grid-area: 2 / 1 / span 1 / span 3;
   max-width: 28vw;
-  max-height: 18vh;
+  max-height: 22vh;
 }
 
 .hufflepuff-home {
@@ -176,8 +176,8 @@
 
 .seal {
   grid-area: 1 / 1 / span 1 / span 3;
-  max-height: 50vh;
-  margin-top: 5vh;
+  max-height: 60vh;
+  margin-top: 2vh;
   padding-left: 4%;
   opacity: 0.8;
 }
