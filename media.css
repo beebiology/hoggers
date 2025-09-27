@@ -24,7 +24,7 @@
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: left;
-  height: 90vh;
+  height: 100vh;
 }
 
 .haGRID h1, .haGRID span {
