@@ -9,21 +9,11 @@
     display: none;
   }
 
-  .splash {
-    max-width: 100vw;
-  }
-
-  .splash img {
-    height: 30vh;
-    padding-left: 26vw;
-  }
-
-
 /* MEDIA QUERIES FOR HAGRID */
 .haGRID {
   grid-template: 1fr 1fr / 1fr;
   background-position: left;
-  height: 100vh;
+  height: 95vh;
 }
 
 .haGRID h1, .haGRID span {
@@ -40,7 +30,7 @@
   height: 50vh;
   width: 90vw; 
 
-  transform: scale(1.3) translateY(-10%) translateX(-10%);
+  transform: scale(1.3) translateY(-5%) translateX(-10%);
 }
 
 /* MEDIA QUERIES FOR DUMBLEDORE */
@@ -309,7 +299,19 @@ footer a {
   right: 55%;
   bottom: 3%;
 }
-
 }
 
-/*  September 26th  */
+/* MEDIA QUERIES FOR SPLASH */
+
+  .splash {
+    max-width: 100vw;
+  }
+
+  .splash img {
+    height: 30vh;
+    padding-left: 14vw;
+  }
+
+  .splash h1 {
+    display: none;
+  }
