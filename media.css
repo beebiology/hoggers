@@ -299,7 +299,6 @@ footer a {
   right: 55%;
   bottom: 3%;
 }
-}
 
 /* MEDIA QUERIES FOR SPLASH */
 
@@ -315,3 +314,5 @@ footer a {
   .splash h1 {
     display: none;
   }
+  
+}
