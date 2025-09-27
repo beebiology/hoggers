@@ -307,12 +307,8 @@ footer a {
   }
 
   .splash img {
-    height: 30vh;
-    padding-left: 14vw;
+    height: 29vh;
+    padding-left: 0vw;
   }
 
-  .splash h1 {
-    display: none;
-  }
-  
 }
